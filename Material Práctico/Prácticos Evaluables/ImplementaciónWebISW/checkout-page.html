@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body class="grey lighten-3">
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
+        <strong class="blue-text">DeliverEat!</strong>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link waves-effect" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="#" target="_blank">Terminos y Condiciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="#" target="_blank">Cuenta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="#" target="_blank">Configuracion</a>
+          </li>
+        </ul>
+
+        <!-- Right -->
+       
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!--Main layout-->
+  <main class="mt-5 pt-4">
+    <div class="container wow fadeIn">
+
+      <!-- Heading -->
+      <h2 class="my-5 h2 text-center">Estás a punto de finalizar tu pedido...</h2>
+
+
+      <!-- Heading -->
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Tu información </span>
+      
+      </h4>
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-8 mb-4">
+
+          <!--Card-->
+          <div class="card">
+
+            <!--Card content-->
+            <form class="card-body">
+
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                
+                <!--Grid column-->
+
+                <!--Grid column-->
+               
+                <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Username-->
+              
+
+              <!--email-->
+
+              <!--address-->
+              <div class="md-form mb-5">
+                <input type="text" id="address" class="form-control" placeholder="Colon 5000">
+                <label for="address" class="">Dirección</label>
+              </div>
+
+              <!--address-2-->
+              <div class="md-form mb-5">
+                <input type="text" id="address-2" class="form-control" placeholder="Piso">
+                <label for="address-2" class="">Dirección 2 (opcional)</label>
+              </div>
+
+              <!--Grid row-->
+              <div class="row">
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4">
+
+                  <label for="country">Provincia</label>
+                  <select class="custom-select d-block w-100" id="country" required>
+                    <option value="">Seleccionar...</option>
+                    <option>Córdoba</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor, proveer datos válidos.
+                  </div>
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                  <label for="state">Ciudad</label>
+                  <select class="custom-select d-block w-100" id="state" required>
+                    <option value="">Seleccionar...</option>
+                    <option>Capital</option>
+                    <option>Colonia Caroya</option>
+                    <option>Jesús María</option>
+                    <option>Rio Primero</option>
+                    <option>Rio Segundo</option>
+                    <option>Villa Allende</option>
+                    <option>Mendiolaza</option>
+                    <option>Calera</option>
+                    <option>Unquillo</option>
+                    <option>Carlos Paz</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor, proveer datos válidos.
+                  </div>
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                  <label for="zip">Código Postal</label>
+                  <input type="text" class="form-control" id="zip" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Insertar Código Postal válido.
+                  </div>
+
+                </div>
+                <!--Grid column-->
+                
+                <iframe height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" style="width:100%;" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20C%C3%B3rdoba+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='http://maps-generator.com/es'>maps-generator.com</a> <script type='text/javascript' src='https://maps-generator.com/google-maps-authorization/script.js?id=598acf23eb571168d05767a5013aafaa6e93a137'></script>
+            
+                
+
+              </div>
+              <!--Grid row-->
+
+              <hr>
+
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="same-address">
+                <label class="custom-control-label" for="same-address">La dirección de envío debe ser la misma que la de cobro</label>
+              </div> 
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="save-info">
+                <label class="custom-control-label" for="save-info">Guarda esta información para despues.</label>
+              </div>
+
+              <hr>
+
+              <div class="d-block my-3">
+                <div>
+                  <button class="btn btn-primary btn-abrir-formulario" id="btn-abrir-formulario" style="color:white;">
+                    <a href="#tarjeta" style="color:white;">Tarjeta de Crédito</a>
+                  </button>
+                </div>
+                <div>
+                  <button class="btn btn-primary btn-abrir-formulario-debito" id="btn-abrir-formulario-debito" style="color:white;">
+                    <a href="#tarjeta" style="color:white;">Tarjeta de Debito</a>
+                  </button>
+                </div>
+                <button class="btn btn-secondary btn-abrir-formulario-pago-efectivo" id="btn-abrir-formulario-pago-efectivo" style="color:white;">
+                  <a href="#tarjeta" style="color:white;">Efectivo</a>
+                </button>
+              </div>
+              
+
+
+
+              <hr class="mb-4">
+
+              <button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal" type="submit" style="margin-bottom:15px;">Confirmar</button>
+
+              <button class="btn btn-danger btn-lg btn-block"data-toggle="modal" data-target="#exampleModal1"  type="submit" id="cancelar">Cancelar</button>
+
+              <!--Modal CONFIRMAR-->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Excelente!</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      El pedido ha sido relizado correctamente, tu pedido está pronto a ser enviado.
+                      Llegará aproximadamente en:
+                    </div>
+                    <div>
+                      <!--Countdown-->
+
+                    </div>
+                    <div class="modal-footer">
+                      
+                      <button type="button" class="btn btn-primary">Entendido</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Modal CANCELAR-->
+              <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">¿Seguro?</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Estas a punto de cancelar tu pedido. Esto podría tener costos adheridos.
+                    </div>
+                    <div>
+                      <!--Countdown-->
+
+                    </div>
+                    <div class="modal-footer">
+                      
+                      <button type="button" class="btn btn-primary">Entendido</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-4 mb-4">
+
+          <!-- Heading -->
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Tu carrito </span>
+            <span class="badge badge-secondary badge-pill">3</span>
+          </h4>
+
+          <!-- Cart -->
+          <ul class="list-group mb-3 z-depth-1">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Comercio</h6>
+                <small class="text-muted">Homies S.A</small>
+              </div>
+
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Hamburguesa</h6>
+                <small class="text-muted">Hamburguesa triple,queso cheddar, bacon.</small>
+              </div>
+              <span class="text-muted">$280</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Gaseosa</h6>
+                <small class="text-muted">Coca-Cola, 500ml, sin azucar.</small>
+              </div>
+              <span class="text-muted">$80</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Papas</h6>
+                <small class="text-muted">Papas rústicas con cheddar</small>
+              </div>
+              <span class="text-muted">$150</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+                <h6 class="my-0">Código promocional</h6>
+                <small>MEQUEDOENCASA</small>
+              </div>
+              <span class="text-success">-$50</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (Pesos)</span>
+              <strong>$460</strong>
+            </li>
+          </ul>
+          <!-- Cart -->
+
+          <!-- Promo code -->
+          <form class="card p-2">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Promo code" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-secondary btn-md waves-effect m-0" type="button">Aplicar</button>
+              </div>
+            </div>
+          </form>
+          <!-- Promo code -->
+          <div class="contenedor">
+          
+            <!-- Tarjeta -->
+            <section class="tarjeta" id="tarjeta">
+              <div class="delantera">
+                <div class="logo-marca" id="logo-marca">
+                  <!-- <img src="img/logos/visa.png" alt=""> -->
+                </div>
+                <img src="img/chip-tarjeta.png" class="chip" alt="">
+                <div class="datos">
+                  <div class="grupo" id="numero">
+                    <p class="label">Número Tarjeta</p>
+                    <p class="numero">#### #### #### ####</p>
+                  </div>
+                  <div class="flexbox">
+                    <div class="grupo" id="nombre">
+                      <p class="label">Nombre Tarjeta</p>
+                      <p class="nombre">Juan Perez</p>
+                    </div>
+        
+                    <div class="grupo" id="expiracion">
+                      <p class="label">Expiracion</p>
+                      <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="trasera">
+                <div class="barra-magnetica"></div>
+                <div class="datos">
+                  <div class="grupo" id="firma">
+                    <p class="label">Firma</p>
+                    <div class="firma"><p></p></div>
+                  </div>
+                  <div class="grupo" id="ccv">
+                    <p class="label">CCV</p>
+                    <p class="ccv"></p>
+                  </div>
+                </div>
+                <p class="leyenda">Ten cuidado con la información de tu tarjeta</p>
+                <a href="#" class="link-banco">DeliverEat!</a>
+              </div>
+            </section>
+        
+            <!-- Contenedor Boton Abrir Formulario -->
+            <div class="contenedor-btn">
+              <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+        
+            <!-- Formulario -->
+            <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+              <div class="grupo">
+                <label for="inputNumero">Número Tarjeta</label>
+                <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+              </div>
+              <div class="grupo">
+                <label for="inputNombre">Nombre</label>
+                <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+              </div>
+              <div class="flexbox">
+                <div class="grupo expira">
+                  <label for="selectMes">Expiracion</label>
+                  <div class="flexbox">
+                    <div class="grupo-select">
+                      <select name="mes" id="selectMes">
+                        <option disabled selected>Mes</option>
+                      </select>
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="grupo-select">
+                      <select name="year" id="selectYear">
+                        <option disabled selected>Año</option>
+                      </select>
+                      <i class="fas fa-angle-down"></i>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="grupo ccv">
+                  <label for="inputCCV">CCV</label>
+                  <input type="text" id="inputCCV" maxlength="3">
+                </div>
+              </div>
+              <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+          </div>
+        </div>
+        <!--Grid column-->
+
+         <!--TARJETA-->
+       
+          
+      
+        <!---/ TARJETA-->
+
+      </div>
+      <!--Grid row-->
+
+    </div>
+
+
+  </main>
+  <!--Main layout-->
+
+  <!---TARJETA DE CREDITO-->
+           
+  <!--/TARJETA DE CREDITO-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4" style="
+    margin-bottom: 20px;
+">
+      <a class="btn btn-outline-white waves-effect waves-light" href="#" target="_blank" role="button" style="
+    margin-bottom: 10px;">Terminos y Condiciones
+        <i class="f"></i>
+      </a>
+      
+    </div>
+      
+    </div>
+    <!--/.Call to action-->
+
+ 
+
+
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2019 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> Grupo 8 4K3 ISW </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+              <script src="js/main.js"></script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+</body>
+
+</html>
