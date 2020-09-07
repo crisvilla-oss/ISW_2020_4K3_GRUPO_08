@@ -17,6 +17,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height:840px;
 }
 
 /* ---------- Estilos Generales de las Tarjetas ----------*/
