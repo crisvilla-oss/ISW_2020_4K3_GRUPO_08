@@ -32,6 +32,18 @@ body {
 	z-index: 2;
 }
 
+.efectivo {
+	width: 100%;
+	max-width: 550px;
+	position: relative;
+	color: #fff;
+	transition: .3s ease all;
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+	cursor: pointer;
+	z-index: 2;
+}
+
 .tarjeta.active {
 	transform: rotateY(180deg);
 }
@@ -202,11 +214,24 @@ body {
 	transition: clip-path .3s ease-out;
 }
 
+.formulario-efectivo {
+	background: #fff;
+	width: 100%;
+	max-width: 700px;
+	padding: 50px 30px 30px 30px;
+	border-radius: 10px;
+	position: relative;
+	top: -50px;
+	z-index: 1;
+	transition: clip-path .3s ease-out;
+}
+
 .formulario-tarjeta.active {
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.formulario-tarjeta label {
+.formulario-tarjeta label,
+.formulario-efectivo label {
 	display: block;
 	color: #7d8994;
 	margin-bottom: 5px;
@@ -215,6 +240,8 @@ body {
 
 .formulario-tarjeta input,
 .formulario-tarjeta select,
+.formulario-efectivo input,
+.formulario-efectivo select,
 .btn-enviar {
 	border: 2px solid #CED6E0;
 	font-size: 18px;
@@ -223,7 +250,10 @@ body {
 	padding: 5px 12px;
 	transition: .3s ease all;
 	border-radius: 5px;
+	margin-top:10px;
 }
+
+
 
 .formulario-tarjeta input:hover,
 .formulario-tarjeta select:hover {
@@ -276,7 +306,8 @@ body {
 	color: #93bfed;
 }
 
-.formulario-tarjeta .btn-enviar {
+.formulario-tarjeta .btn-enviar,
+.formulario-efectivo .btn-enviar{
 	border: none;
 	padding: 10px;
 	font-size: 22px;
@@ -286,6 +317,8 @@ body {
 	cursor: pointer;
 }
 
-.formulario-tarjeta .btn-enviar:hover {
+.formulario-tarjeta .btn-enviar:hover,
+.formulario-efectivo .btn-enviar:hover {
+
 	background: #1850b1;
 }

@@ -43,7 +43,7 @@
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link waves-effect" href="#">Home
+            <a class="nav-link waves-effect" href="#">Fin Pedido
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -56,9 +56,16 @@
           <li class="nav-item">
             <a class="nav-link waves-effect" href="#" target="_blank">Configuracion</a>
           </li>
-        </ul>
+         
 
+        </ul>
         <!-- Right -->
+        <ul>
+          <li class="nav-item" id="usuario" style="list-style:none;" >
+            <a class="nav-link waves-effect"  target="_blank"> <i class="fas fa-user-circle"></i>  ClienteA</a>
+          </li>
+        </ul>
+        
        
 
       </div>
@@ -433,6 +440,36 @@
               <button type="submit" class="btn-enviar">Enviar</button>
             </form>
           </div>
+
+          <!---FORMULARIO PAGO EFECTIVO-->
+          <div class="contenedor">
+          
+            <!-- Tarjeta -->
+            <section class="tarjeta" id="efectivo">
+        
+            </section>
+        
+            <!-- Contenedor Boton Abrir Formulario -->
+            <div class="contenedor-btn">
+              <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+                <i class="fas fa-money-bill-alt"></i>
+              </button>
+            </div>
+        
+            <!-- Formulario -->
+            <form action="" id="formulario-efectivo" class="formulario-efectivo">
+              <div class="grupo">
+                <div>
+                  <label for="inputNumero">¿Abona exacto?</label>
+                </div>
+                
+                <label for="inputNumero">Monto Dinero</label>
+                <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+              </div>
+              
+              <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+          </div>
         </div>
         <!--Grid column-->
 
@@ -451,9 +488,6 @@
   </main>
   <!--Main layout-->
 
-  <!---TARJETA DE CREDITO-->
-           
-  <!--/TARJETA DE CREDITO-->
 
   <!--Footer-->
   <footer class="page-footer text-center font-small mt-4 wow fadeIn">

@@ -4376,6 +4376,11 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-item {
   margin-bottom: -1px;
+  list-style:none;
+}
+
+#usuario{
+  margin-left: 50px !important;
 }
 
 .nav-tabs .nav-link {
@@ -4399,6 +4404,7 @@ input[type="button"].btn-block {
   color: #495057;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
+  list-style:none;
 }
 
 .nav-tabs .dropdown-menu {
@@ -4421,6 +4427,7 @@ input[type="button"].btn-block {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   text-align: center;
+  list-style:none;
 }
 
 .nav-justified .nav-item {
@@ -4429,6 +4436,7 @@ input[type="button"].btn-block {
   -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: center;
+  list-style:none;
 }
 
 .tab-content > .tab-pane {
