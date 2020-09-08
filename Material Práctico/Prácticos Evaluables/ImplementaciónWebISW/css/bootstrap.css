@@ -2609,6 +2609,7 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
+  width:100%!important;
 }
 
 .btn-danger:hover {
@@ -4438,6 +4439,8 @@ input[type="button"].btn-block {
   text-align: center;
   list-style:none;
 }
+
+
 
 .tab-content > .tab-pane {
   display: none;

@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="grey lighten-3">
+<body class="grey lighten-3" id="body">
 
   <!-- Navbar -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
@@ -96,8 +96,9 @@
           <!--Card-->
           <div class="card">
 
+     
             <!--Card content-->
-            <form class="card-body">
+            <form class="card-body" id="form">
 
               <!--Grid row-->
               <div class="row">
@@ -120,13 +121,13 @@
 
               <!--address-->
               <div class="md-form mb-5">
-                <input type="text" id="address" class="form-control" placeholder="Colon 5000">
+                <input type="text" id="address" class="form-control" placeholder="Colon 5000" required>
                 <label for="address" class="">Dirección</label>
               </div>
 
               <!--address-2-->
               <div class="md-form mb-5">
-                <input type="text" id="address-2" class="form-control" placeholder="Piso">
+                <input type="text" id="address-2" class="form-control" placeholder="Piso"required>
                 <label for="address-2" class="">Dirección 2 (opcional)</label>
               </div>
 
@@ -152,18 +153,18 @@
                 <div class="col-lg-4 col-md-6 mb-4">
 
                   <label for="state">Ciudad</label>
-                  <select class="custom-select d-block w-100" onchange="cambioRegion()"  id="state" required>
+                  <select class="custom-select d-block w-100" onchange="establecerMapa()"  id="state" required>
                     <option value="">Seleccionar...</option>
-                    <option value="Capital">Capital</option>
-                    <option value="Colonia-Caroya">Colonia Caroya</option>
-                    <option value="Jesús-María">Jesús María</option>
-                    <option value="Rio-Primero">Rio Primero</option>
-                    <option value="Rio-Segundo">Rio Segundo</option>
-                    <option value="Villa-Allende">Villa Allende</option>
-                    <option value="Mendiolaza">Mendiolaza</option>
-                    <option value="Calera">Calera</option>
-                    <option value="Unquillo">Unquillo</option>
-                    <option value="Carlos-Paz">Carlos Paz</option>
+                    <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108958.20891365617!2d-64.25757236845544!3d-31.415668156136864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a283b4d07fa3%3A0x7fa85f3afc7e8bb5!2sCapital%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1599598356160!5m2!1ses-419!2sar">Capital</option>
+                    <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13676.596202201395!2d-64.07049185808215!3d-31.022096665984524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432626eac44a027%3A0x85b6e301081d1c22!2sCol.%20Caroya%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1599592292216!5m2!1ses-419!2sar">Colonia Caroya</option>
+                    <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27364.02051826626!2d-64.10972113374125!3d-30.984360977162947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943263974bf8796f%3A0x2fc325cba041b543!2zSmVzdXMgTWFyw61hLCBDw7NyZG9iYQ!5e0!3m2!1ses-419!2sar!4v1599598695430!5m2!1ses-419!2sar">Jesús María</option>
+                    <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27264.24862640329!2d-63.6446739830128!3d-31.330514803801975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432dfa99641837b%3A0xee0238c615b1712b!2zUsOtbyBQcmltZXJvLCBDw7NyZG9iYQ!5e0!3m2!1ses-419!2sar!4v1599598722720!5m2!1ses-419!2sar">Rio Primero</option>
+                    <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27171.671889180237!2d-63.92214283233773!3d-31.64866022152733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432cafff1f1cec1%3A0xf370c1a41d5322ac!2zUsOtbyBTZWd1bmRvLCBDw7NyZG9iYQ!5e0!3m2!1ses-419!2sar!4v1599598743295!5m2!1ses-419!2sar">Rio Segundo</option>
+                    <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54553.43706842155!2d-64.30634466173869!3d-31.2874394003083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329d056aa66e5f%3A0x2cd58396ed99410e!2sVilla%20Allende%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1599598452072!5m2!1ses-419!2sar">Villa Allende</option>
+                    <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54567.48844994807!2d-64.3210352619451!3d-31.263146733506616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329d2d35292215%3A0xf652dcee9efa32c4!2sMendiolaza%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1599598519978!5m2!1ses-419!2sar">Mendiolaza</option>
+                    <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54520.39312781721!2d-64.37042511125355!3d-31.344500589839125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329d9ee10fe983%3A0xa7e85e1549d2e98e!2sLa%20Calera%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1599598486222!5m2!1ses-419!2sar">Calera</option>
+                    <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54584.41533813023!2d-64.34199826219366!3d-31.23386021327311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432828c7c561703%3A0xbace5f80d318375c!2sUnquillo%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1599598570191!5m2!1ses-419!2sar" >Unquillo</option>
+                    <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108962.41421997012!2d-64.5697773026418!3d-31.412047399124123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d6640d6777c71%3A0x75c24ab6cb121bed!2sVilla%20Carlos%20Paz%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1599598544311!5m2!1ses-419!2sar">Carlos Paz</option>
                   </select>
                   
 
@@ -186,7 +187,7 @@
                 </div>
                 <!--Grid column-->
                 
-                  <iframe height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" style="width:100%;" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20C%C3%B3rdoba+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> 
+                  <iframe  id="mapa" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" style="width:100%;" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20C%C3%B3rdoba+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> 
                   <a href='http://maps-generator.com/es'>maps-generator.com</a> 
                   <script type='text/javascript' src='https://maps-generator.com/google-maps-authorization/script.js?id=598acf23eb571168d05767a5013aafaa6e93a137'></script>
                 
@@ -230,62 +231,24 @@
 
               <hr class="mb-4">
 
-              <button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal" type="submit" style="margin-bottom:15px;">Confirmar</button>
+              <button class="btn btn-primary btn-lg btn-block" id="confirmar" data-toggle="modal" data-target="#exampleModal" type="submit" style="margin-bottom:15px;">Confirmar</button>
 
-              <button class="btn btn-danger btn-lg btn-block"data-toggle="modal" data-target="#exampleModal1"  type="submit" id="cancelar">Cancelar</button>
+              
+
+              
+             
 
               <!--Modal CONFIRMAR-->
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Excelente!</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      El pedido ha sido relizado correctamente, tu pedido está pronto a ser enviado.
-                      Llegará aproximadamente en:
-                    </div>
-                    <div>
-                      <!--Countdown-->
-
-                    </div>
-                    <div class="modal-footer">
-                      
-                      <button type="button" class="btn btn-primary">Entendido</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!--Modal CANCELAR-->
-              <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">¿Seguro?</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      Estas a punto de cancelar tu pedido. Esto podría tener costos adheridos.
-                    </div>
-                    <div>
-                      <!--Countdown-->
-
-                    </div>
-                    <div class="modal-footer">
-                      
-                      <button type="button" class="btn btn-primary">Entendido</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
 
             </form>
+
+            
+            <section style="padding-right: 20px;padding-left: 20px;margin-top:-50px; padding-bottom:15px;">
+               
+              <button class="btn btn-danger btn-lg btn-block mt-5" type="reset" id="cancelar">Cancelar</button>
+
+            </section>
 
           </div>
           <!--/.Card-->
@@ -490,22 +453,7 @@
     </div>
 
 <!--Mapa secundario-->
-<div id="googleMap" style="width:100%;height:400px;"></div>
 
-    <script>
-    function myMap() {
-    var mapProp= {
-      center:new google.maps.LatLng(51.508742,-0.120850),
-      zoom:5,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-    </script>
-
-<script type='text/javascript' src='https://maps-generator.com/google-maps-authorization/script.js?id=598acf23eb571168d05767a5013aafaa6e93a137'></script>
-
-
-  </main>
   <!--Main layout-->
 
 
@@ -545,13 +493,19 @@
 
 
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-              <script src="js/main.js"></script>
+              <script src="js/tarjeta.js"></script>
+
+  
+  <!-- CambioMapa -->
+  <script src="js/confirmar.js"></script>
+  <!-- CambioMapa -->
+  <script src="js/mapa.js"></script>
   <!-- JQuery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Initializations -->

@@ -31,6 +31,7 @@ body {
 	
 }
 
+
 /* ---------- Estilos Generales de las Tarjetas ----------*/
 .tarjeta {
 	width: 100%;
@@ -333,4 +334,12 @@ body {
 .formulario-efectivo .btn-enviar:hover {
 
 	background: #1850b1;
+}
+
+.enable{
+	display: block;
+}
+
+.disable{
+	display: none;
 }
