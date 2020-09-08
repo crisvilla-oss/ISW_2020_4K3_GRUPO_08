@@ -20,6 +20,17 @@ body {
 	height:840px;
 }
 
+.contenedor-efectivo {
+	width: 100%;
+	max-width: 1000px;
+	padding-top:  10px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
 /* ---------- Estilos Generales de las Tarjetas ----------*/
 .tarjeta {
 	width: 100%;

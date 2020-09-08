@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
+  <title>DeliverEat! Grupo8</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -27,7 +27,7 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
+      <a class="navbar-brand waves-effect"  target="_blank">
         <strong class="blue-text">DeliverEat!</strong>
       </a>
 
@@ -152,23 +152,25 @@
                 <div class="col-lg-4 col-md-6 mb-4">
 
                   <label for="state">Ciudad</label>
-                  <select class="custom-select d-block w-100" id="state" required>
+                  <select class="custom-select d-block w-100" onchange="cambioRegion()"  id="state" required>
                     <option value="">Seleccionar...</option>
-                    <option>Capital</option>
-                    <option>Colonia Caroya</option>
-                    <option>Jesús María</option>
-                    <option>Rio Primero</option>
-                    <option>Rio Segundo</option>
-                    <option>Villa Allende</option>
-                    <option>Mendiolaza</option>
-                    <option>Calera</option>
-                    <option>Unquillo</option>
-                    <option>Carlos Paz</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Colonia-Caroya">Colonia Caroya</option>
+                    <option value="Jesús-María">Jesús María</option>
+                    <option value="Rio-Primero">Rio Primero</option>
+                    <option value="Rio-Segundo">Rio Segundo</option>
+                    <option value="Villa-Allende">Villa Allende</option>
+                    <option value="Mendiolaza">Mendiolaza</option>
+                    <option value="Calera">Calera</option>
+                    <option value="Unquillo">Unquillo</option>
+                    <option value="Carlos-Paz">Carlos Paz</option>
                   </select>
+                  
+
                   <div class="invalid-feedback">
                     Por favor, proveer datos válidos.
                   </div>
-
+                  
                 </div>
                 <!--Grid column-->
 
@@ -184,7 +186,11 @@
                 </div>
                 <!--Grid column-->
                 
-                <iframe height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" style="width:100%;" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20C%C3%B3rdoba+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='http://maps-generator.com/es'>maps-generator.com</a> <script type='text/javascript' src='https://maps-generator.com/google-maps-authorization/script.js?id=598acf23eb571168d05767a5013aafaa6e93a137'></script>
+                  <iframe height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" style="width:100%;" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20C%C3%B3rdoba+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> 
+                  <a href='http://maps-generator.com/es'>maps-generator.com</a> 
+                  <script type='text/javascript' src='https://maps-generator.com/google-maps-authorization/script.js?id=598acf23eb571168d05767a5013aafaa6e93a137'></script>
+                
+                
             
                 
 
@@ -209,15 +215,14 @@
                   <button class="btn btn-primary btn-abrir-formulario" id="btn-abrir-formulario" style="color:white;">
                     <a href="#tarjeta" style="color:white;">Tarjeta de Crédito</a>
                   </button>
-                </div>
-                <div>
                   <button class="btn btn-primary btn-abrir-formulario-debito" id="btn-abrir-formulario-debito" style="color:white;">
-                    <a href="#tarjeta" style="color:white;">Tarjeta de Debito</a>
+                    <a href="#tarjeta" style="color:white;">Tarjeta de Débito</a>
+                  </button>
+                  <button class="btn btn-secondary btn-abrir-formulario-pago-efectivo" id="btn-abrir-formulario-pago-efectivo" style="color:white;">
+                    <a href="#efectivo" style="color:white;">Efectivo</a>
                   </button>
                 </div>
-                <button class="btn btn-secondary btn-abrir-formulario-pago-efectivo" id="btn-abrir-formulario-pago-efectivo" style="color:white;">
-                  <a href="#efectivo" style="color:white;">Efectivo</a>
-                </button>
+                
               </div>
               
 
@@ -442,7 +447,7 @@
           </div>
 
           <!---FORMULARIO PAGO EFECTIVO-->
-          <div class="contenedor">
+          <div class="contenedor-efectivo">
           
             <!-- Tarjeta -->
             <section class="tarjeta" id="efectivo">
@@ -484,6 +489,21 @@
 
     </div>
 
+<!--Mapa secundario-->
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+    <script>
+    function myMap() {
+    var mapProp= {
+      center:new google.maps.LatLng(51.508742,-0.120850),
+      zoom:5,
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    </script>
+
+<script type='text/javascript' src='https://maps-generator.com/google-maps-authorization/script.js?id=598acf23eb571168d05767a5013aafaa6e93a137'></script>
+
 
   </main>
   <!--Main layout-->
@@ -512,8 +532,8 @@
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2019 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> Grupo 8 4K3 ISW </a>
+      © 2020 Copyright:
+      <a  target="_blank"> Grupo 8 4K3 ISW </a>
     </div>
     <!--/.Copyright-->
 
@@ -521,6 +541,8 @@
   <!--/.Footer-->
 
   <!-- SCRIPTS -->
+
+
 
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
               <script src="js/main.js"></script>
