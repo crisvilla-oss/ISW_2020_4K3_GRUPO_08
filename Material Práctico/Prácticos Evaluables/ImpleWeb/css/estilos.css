@@ -30,6 +30,7 @@ body {
 	transform-style: preserve-3d;
 	cursor: pointer;
 	z-index: 2;
+
 }
 
 .tarjeta.active {
@@ -50,7 +51,7 @@ body {
 
 .tarjeta .delantera {
 	width: 100%;
-	background: url(../img/bg-tarjeta/bg-tarjeta-02.jpg);
+	background: url(../img/bg-tarjeta/bg-tarjeta-01.jpg);
 	background-size: cover;
     margin-top: 42px;
 }
@@ -95,12 +96,13 @@ body {
 
 /* ---------- Tarjeta Trasera ----------*/
 .trasera {
-	background: url(../img/bg-tarjeta/bg-tarjeta-02.jpg);
+	background: url(../img/bg-tarjeta/bg-tarjeta-01.jpg);
 	background-size: cover;
 	position: absolute;
 	top: 0;
 	transform: rotateY(180deg);
 	backface-visibility: hidden;
+	
 }
 
 .trasera .barra-magnetica {
@@ -225,6 +227,7 @@ body {
 .formulario-efectivo.active {
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+
 
 .formulario-tarjeta label {
 	display: block;
@@ -383,3 +386,23 @@ body {
 	top:-150px ;
 	
 }
+
+.checkbox{
+	width:30px!important;
+	padding:5px;
+}
+
+#status{
+	display: flex;
+	justify-content: center;
+}
+
+.montoDinero{
+	pointer-events: all;
+}
+
+.montoDinero.active{
+	pointer-events: none;
+}
+
+
