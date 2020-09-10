@@ -27,6 +27,7 @@ function validateForm() {
         document.getElementById('status').innerHTML = "";
        }
 
+
        if (document.getElementById("btn-credito").clicked == true){
         numeroIngresado=document.getElementById('inputNumero').value;
             if (numeroIngresado == "" | numeroIngresado == undefined | numeroIngresado === 5) 
@@ -59,12 +60,16 @@ function validateForm() {
             {document.getElementById('status').innerHTML = "Colocar Codigo de Seguridad!";
         return false;
     }
-       else if (document.getElementById("btn-efectivo").clicked == true){
+      
+  
+    
+    if (document.getElementById("btn-efectivo").clicked == true){
         montoIngresado=document.getElementById('inputMonto').value;
-            if (montoIngresado == "" | montoIngresado == undefined | montoIngresado <= 460) 
-            {document.getElementById('status').innerHTML = "Colocar Monto!";
+            if (montoIngresado == "" |  montoIngresado <= 460) 
+            {document.getElementById('status').innerHTML = "Colocar Monto correcto!";
         return false;
     }
+
       }
     
     
@@ -90,7 +95,7 @@ function validateForm() {
 
    
     
-    document.getElementById('status').innerHTML = "Enviando...";
+    document.getElementById('status').innerHTML = "Datos confirmados, Enviando tu pedido...";
     document.getElementById('contact-form').submit();
     
     };
