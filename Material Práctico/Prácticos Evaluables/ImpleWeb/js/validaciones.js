@@ -29,6 +29,7 @@ function validateForm() {
 
 
        if (document.getElementById("btn-credito").clicked == true){
+         {
         numeroIngresado=document.getElementById('inputNumero').value;
             if (numeroIngresado == "" | numeroIngresado == undefined | numeroIngresado === 5) 
             {document.getElementById('status').innerHTML = "Colocar Numero de Tarjeta Válido!";
@@ -59,7 +60,7 @@ function validateForm() {
         if (codigoIngresado == "" | codigoIngresado == undefined) 
             {document.getElementById('status').innerHTML = "Colocar Codigo de Seguridad!";
         return false;
-    }
+    }}
       
   
     
