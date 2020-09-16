@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Formulario de Tarjeta de Crédito Dinámico</title>
+	<title>DeliverEAT!</title>
 	<link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
 	  <!-- Font Awesome -->
 	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
@@ -45,7 +45,10 @@
 	
 		<div class="container-fluid" id="inicio">
 			<div class="row">
-				<div class="col-md-8 ">
+				<div class="col-md-2">
+				</div>
+
+				<div class=" col-md-8">
 
 					<h4 class="d-flex justify-content-between align-items-center mb-3">
 						<span class="text-muted">Tu carrito </span>
@@ -110,7 +113,7 @@
 						<div class="textos">
 							<div class="md-form mb-5">
 								<label for="">Direccion</label>
-								<input type="text" id="address" class="form-control" placeholder="1234 Main St">
+								<input type="text" id="address" class="form-control" placeholder="Colon 5000">
 								<h5 class="validar"></h5>
 								
 							  </div>
@@ -118,7 +121,7 @@
 							  <!--address-2-->
 							  <div class="md-form mb-5">
 								  <label for="">Direccion 2 (opcional)</label>
-								<input type="text" id="address-2" class="form-control" placeholder="Apartment or suite">
+								<input type="text" id="address-2" class="form-control" placeholder="Piso o Departamento">
 								<h5 class="validar"></h5>
 								
 
@@ -130,19 +133,17 @@
 								<div class="uno">
 								<label for="">Provincia</label>
 								<select class="custom-select d-block w-100" id="provincia" required>
-								  <option value="">Choose...</option>
-								  <option>California</option>
+								  <option value="">Córdoba</option>
+								  <option>Córdoba</option>
 								</select>
-								<div class="invalid-feedback">
-								  Please provide a valid state.
-								</div>
+								
 
 								</div>
 
 								<div class="dos">
 									<label for="state">Ciudad</label> 
 									 <select class="custom-select d-block w-100" onchange="establecerMapa()"  id="localidad" >
-													   <option value="">Seleccionar...</option>
+													   <option value="" >Seleccionar...</option>
 													   <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108958.20891365617!2d-64.25757236845544!3d-31.415668156136864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a283b4d07fa3%3A0x7fa85f3afc7e8bb5!2sCapital%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1599598356160!5m2!1ses-419!2sar">Capital</option>
 													   <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13676.596202201395!2d-64.07049185808215!3d-31.022096665984524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432626eac44a027%3A0x85b6e301081d1c22!2sCol.%20Caroya%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1599592292216!5m2!1ses-419!2sar">Colonia Caroya</option>
 													   <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27364.02051826626!2d-64.10972113374125!3d-30.984360977162947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943263974bf8796f%3A0x2fc325cba041b543!2zSmVzdXMgTWFyw61hLCBDw7NyZG9iYQ!5e0!3m2!1ses-419!2sar!4v1599598695430!5m2!1ses-419!2sar">Jesús María</option>
@@ -154,9 +155,7 @@
 													   <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54584.41533813023!2d-64.34199826219366!3d-31.23386021327311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432828c7c561703%3A0xbace5f80d318375c!2sUnquillo%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1599598570191!5m2!1ses-419!2sar" >Unquillo</option>
 													   <option value="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108962.41421997012!2d-64.5697773026418!3d-31.412047399124123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d6640d6777c71%3A0x75c24ab6cb121bed!2sVilla%20Carlos%20Paz%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1599598544311!5m2!1ses-419!2sar">Carlos Paz</option>
 													 </select>
-								<div class="invalid-feedback">
-								  Please provide a valid state.
-								</div>
+								
 								
 
 
@@ -193,7 +192,8 @@
 						<div class="btn-pago">
 							
 							<br>
-							<button class="btn credito" id="btn-credito">
+							<button class="btn credito" value="Count" id="btn-credito">
+								<a href="tarjeta"></a>
 								<i class="fas fa-credit-card"></i>
 								Tarjeta de Credito
 							</button>
@@ -201,15 +201,161 @@
 								<i class="fas fa-money-check"></i>
 								Tarjeta de Débito
 							</button>
-							<button class="btn efectivo" id="btn-efectivo">
+							<button class="btn efectivo" value="+" id="btn-efectivo" focus="#formulario-efectivo">
 								 <i class="fas fa-money-bill-wave "></i>
 								Efectivo
 							</button>
 						
 						</div>
 						<hr>
+
+						
 						<div class="botones">
-							<button class="btn btn-primary confirmar">
+							
+							<div class="contenedor">
+								<section class="tarjeta" id="tarjeta">
+									<div class="delantera">
+										<div class="logo-marca" id="logo-marca">
+											<!-- <img src="img/logos/visa.png" alt=""> -->
+										</div>
+										<img src="img/chip-tarjeta.png" class="chip" alt="">
+										<div class="datos">
+											<div class="grupo" id="numero">
+												<p class="label">Número Tarjeta</p>
+												<p class="numero">#### #### #### ####</p>
+											</div>
+											<div class="flexbox">
+												<div class="grupo" id="nombre">
+													<p class="label">Nombre Tarjeta</p>
+													<p class="nombre">Juan Perez</p>
+												</div>
+						
+												<div class="grupo" id="expiracion">
+													<p class="label">Expiracion</p>
+													<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+												</div>
+											</div>
+										</div>
+									</div>
+						
+									<div class="trasera">
+										<div class="barra-magnetica"></div>
+										<div class="datos">
+											<div class="grupo" id="firma">
+												<p class="label">Firma</p>
+												<div class="firma"><p></p></div>
+											</div>
+											<div class="grupo" id="ccv">
+												<p class="label">CCV</p>
+												<p class="ccv"></p>
+											</div>
+										</div>
+										<p class="leyenda">Cuida de tu información personal, puedes ser victima de fraude</p>
+										<a href="#" class="link-banco">DeliverEAT!</a>
+									</div>
+								</section>
+								</section>
+						
+								<!-- Contenedor Boton Abrir Formulario -->
+								<div class="contenedor-btn">
+									<button class="btn-abrir-formulario" id="btn-abrir-formulario">
+										<i class="fas fa-plus"></i>
+									</button>
+								</div>
+						
+								<!-- Formulario -->
+								<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+									<div class="grupo">
+										<label for="inputNumero">Número Tarjeta</label>
+										<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+										<h5 class="validar"></h5>
+									</div>
+									<div class="grupo">
+										<label for="inputNombre">Nombre</label>
+										<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+										<h5 class="validar"></h5>
+									</div>
+									<div class="flexbox">
+										<div class="grupo expira">
+											<label for="selectMes">Expiracion</label>
+											<div class="flexbox">
+												<div class="grupo-select">
+													<select name="mes" id="selectMes" id="mes">
+														<option disabled selected>Mes</option>
+													</select>
+													<h5 class="validar"></h5>
+													<i class="fas fa-angle-down"></i>
+												</div>
+												<div class="grupo-select">
+													<select name="year" id="selectYear" id="año">
+														<option disabled selected>Año</option>
+													</select>
+													<h5 class="validar"></h5>
+													<i class="fas fa-angle-down"></i>
+												</div>
+											</div>
+										</div>
+						
+										<div class="grupo ccv">
+											<label for="inputCCV">CCV</label>
+											<input type="text" id="inputCCV" maxlength="3">
+										</div>
+									</div>
+									
+			
+									
+								</form>
+			
+								<div class="contenedor-efectivo">
+					  
+									<!-- Tarjeta -->
+									<section class="tarjeta" id="efectivo">
+								
+									</section>
+								
+									<!-- Contenedor Boton Abrir Formulario -->
+									<div class="contenedor-btn">
+									  <button class="btn-abrir-formulario"  id="btn-abrir-formulario-efectivo">
+										<i class="fas fa-money-bill-alt"></i>
+									  </button>
+									</div>
+								
+									<!-- Formulario -->
+									<form action="" id="formulario-efectivo" class="formulario-efectivo">
+									  <div class="grupo">
+										<div>
+										  <label for="inputNumero">¿Abona exacto?</label> <br>
+										  <input type="checkbox" class="form-check-input"  onchange="checkSi()" id="si-efectivo" style="
+										  width: 30px;
+										  border-bottom-width: 5px;
+										  padding-bottom: 5px;
+										  
+									  ">
+										  <label class="form-check-label" for="exampleCheck1" style="
+										  margin-left: 20px;
+										  margin-top: 20px">Si</label> <br>
+										  <input type="checkbox" class="form-check-input" onchange="checkNo()" name="" id="no-efectivo" style="
+										  width: 30px;
+										  border-bottom-width: 5px;
+										  padding-bottom: 5px;
+									  ">
+										  <label for=""style="
+										  margin-left: 20px;
+										  margin-top: 20px">No</label>
+			
+										</div>
+										<br>
+										<label for="inputNumero">Monto Dinero</label>
+										<input class="montoDinero" type="text" value="" id="inputMonto" maxlength="19" autocomplete="off">
+										<h5 class="validar"></h5>
+									  </div>
+									  
+									
+									</form>
+								  </div>
+								</div>
+								<div id="status"></div>
+							<button class="btn btn-primary confirmar" onclick="validateForm()">
 								<i class="fas fa-check"></i>
 								Confirmar
 							</button>
@@ -222,129 +368,9 @@
 
 					</div>
 				</div>
-				<div class="col-md-4 ">
-					<section class="tarjeta" id="tarjeta">
-						<div class="delantera">
-							<div class="logo-marca" id="logo-marca">
-								<!-- <img src="img/logos/visa.png" alt=""> -->
-							</div>
-							<img src="img/chip-tarjeta.png" class="chip" alt="">
-							<div class="datos">
-								<div class="grupo" id="numero">
-									<p class="label">Número Tarjeta</p>
-									<p class="numero">#### #### #### ####</p>
-								</div>
-								<div class="flexbox">
-									<div class="grupo" id="nombre">
-										<p class="label">Nombre Tarjeta</p>
-										<p class="nombre">Jhon Doe</p>
-									</div>
-			
-									<div class="grupo" id="expiracion">
-										<p class="label">Expiracion</p>
-										<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
-									</div>
-								</div>
-							</div>
-						</div>
-			
-						<div class="trasera">
-							<div class="barra-magnetica"></div>
-							<div class="datos">
-								<div class="grupo" id="firma">
-									<p class="label">Firma</p>
-									<div class="firma"><p></p></div>
-								</div>
-								<div class="grupo" id="ccv">
-									<p class="label">CCV</p>
-									<p class="ccv"></p>
-								</div>
-							</div>
-							<p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem, voluptates illo.</p>
-							<a href="#" class="link-banco">www.tubanco.com</a>
-						</div>
-					</section>
-			
-					<!-- Contenedor Boton Abrir Formulario -->
-					<div class="contenedor-btn">
-						<button class="btn-abrir-formulario" id="btn-abrir-formulario">
-							<i class="fas fa-plus"></i>
-						</button>
-					</div>
-			
-					<!-- Formulario -->
-					<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
-						<div class="grupo">
-							<label for="inputNumero">Número Tarjeta</label>
-							<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
-							<h5 class="validar"></h5>
-						</div>
-						<div class="grupo">
-							<label for="inputNombre">Nombre</label>
-							<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
-							<h5 class="validar"></h5>
-						</div>
-						<div class="flexbox">
-							<div class="grupo expira">
-								<label for="selectMes">Expiracion</label>
-								<div class="flexbox">
-									<div class="grupo-select">
-										<select name="mes" id="selectMes">
-											<option disabled selected>Mes</option>
-										</select>
-										<h5 class="validar"></h5>
-										<i class="fas fa-angle-down"></i>
-									</div>
-									<div class="grupo-select">
-										<select name="year" id="selectYear">
-											<option disabled selected>Año</option>
-										</select>
-										<h5 class="validar"></h5>
-										<i class="fas fa-angle-down"></i>
-									</div>
-								</div>
-							</div>
-			
-							<div class="grupo ccv">
-								<label for="inputCCV">CCV</label>
-								<input type="text" id="inputCCV" maxlength="3">
-							</div>
-						</div>
-						
 
-						
-					</form>
-
-					<div class="contenedor-efectivo">
-          
-						<!-- Tarjeta -->
-						<section class="tarjeta" id="efectivo">
-					
-						</section>
-					
-						<!-- Contenedor Boton Abrir Formulario -->
-						<div class="contenedor-btn">
-						  <button class="btn-abrir-formulario" id="btn-abrir-formulario-efectivo">
-							<i class="fas fa-money-bill-alt"></i>
-						  </button>
-						</div>
-					
-						<!-- Formulario -->
-						<form action="" id="formulario-efectivo" class="formulario-efectivo">
-						  <div class="grupo">
-							<div>
-							  <label for="inputNumero">¿Abona exacto?</label>
-							</div>
-							
-							<label for="inputNumero">Monto Dinero</label>
-							<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
-							<h5 class="validar"></h5>
-						  </div>
-						  
-						
-						</form>
-					  </div>
-					</div>
+				<div class="col-md-2">
+				</div>
 
 					
 				</div>
@@ -380,6 +406,11 @@ function establecerMapa(){
 	<script src="js/main.js"></script>
 
 	<script src="./js/mapa.js"></script>
+
+	<script src="./js/validaciones.js"></script>
+
+	<script src="./js/cobro.js"></script>
+
 </body>
 
 

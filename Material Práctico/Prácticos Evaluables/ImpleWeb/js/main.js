@@ -1,4 +1,4 @@
-const tarjeta = document.querySelector('#tarjeta'),
+let tarjeta = document.querySelector('#tarjeta'),
 	  btnAbrirFormulario = document.querySelector('#btn-credito'),
 	  btnAbrirFormularioEfectivo = document.querySelector('#btn-efectivo'),
 	  formularioEfectivo = document.querySelector('#formulario-efectivo');
@@ -10,6 +10,9 @@ const tarjeta = document.querySelector('#tarjeta'),
 	  mesExpiracion = document.querySelector('#tarjeta .mes'),
 	  yearExpiracion = document.querySelector('#tarjeta .year');
 	  ccv = document.querySelector('#tarjeta .ccv');
+	  checkSiEfectivo = document.querySelector('#si-efectivo');
+	  checkEfectivo = document.querySelector('#no-efectivo');
+	  inputEfectivo = document.querySelector('#inputNumero');
 	  
 
 // * Volteamos la tarjeta para mostrar el frente.
@@ -18,6 +21,22 @@ const mostrarFrente = () => {
 		tarjeta.classList.remove('active');
 	}
 }
+
+function checkNo() {
+	if (document.getElementById("no-efectivo").checked = true){
+		inputEfectivo.classList.toggle('active');
+		checkSiEfectivo.checked= false;
+		document.getElementById("inputMonto").disabled = false;
+	}
+}
+
+function checkSi() {
+	if (document.getElementById("si-efectivo").checked = true){
+		document.getElementById("inputMonto").disabled = true;
+		checkEfectivo.checked= false;
+	}
+}
+
 
 // * Rotacion de la tarjeta
 tarjeta.addEventListener('click', () => {
@@ -28,11 +47,20 @@ tarjeta.addEventListener('click', () => {
 btnAbrirFormulario.addEventListener('click', () => {
 	btnAbrirFormulario.classList.toggle('active');
 	formulario.classList.toggle('active');
+	btnAbrirFormularioEfectivo.disabled = !btnAbrirFormularioEfectivo.disabled;
+
 });
+
+checkEfectivo.addEventListener('click', () => {
+	inputEfectivo.classList.toggle('active');
+	;});
 
 btnAbrirFormularioEfectivo.addEventListener('click', () => {
 	btnAbrirFormularioEfectivo.classList.toggle('active');
 	formularioEfectivo.classList.toggle('active');
+	btnAbrirFormulario.disabled = !btnAbrirFormulario.disabled;
+
+	document.querySelector('#formulario-efectivo').focus();
 });
 
 // * Select del mes generado dinamicamente.
@@ -80,15 +108,22 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 		imagen.src = 'img/logos/visa.png';
 		logoMarca.appendChild(imagen);
 	} else if(valorInput[0] == 5){
+		
 		logoMarca.innerHTML = '';
 		const imagen = document.createElement('img');
 		imagen.src = 'img/logos/mastercard.png';
 		logoMarca.appendChild(imagen);
+		validarMasterCard();
 	}
 
 	// Volteamos la tarjeta para que el usuario vea el frente.
 	mostrarFrente();
 });
+
+function validarMasterCard(){
+	if(valorInput[0] == 5)
+	document.getElementById('status').innerHTML= "Por el momento no aceptamos MasterCard";
+}
 
 // * Input nombre de tarjeta
 formulario.inputNombre.addEventListener('keyup', (e) => {
